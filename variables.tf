@@ -1,4 +1,4 @@
-variable "kubeconfig-path" {
+variable "kubeconfig_path" {
     description = "The full path of the Kubernetes config file where MinIO will be deployed"
 }
 

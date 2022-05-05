@@ -1,6 +1,6 @@
 provider "helm" {
   kubernetes {
-    config_path = var.kubeconfig-path
+    config_path = var.kubeconfig_path
   }
 }
 
@@ -9,5 +9,5 @@ resource "helm_release" "release" {
   repository = each.value.repository
   name       = each.value.name
   chart      = each.value.chart
-  values = [ "${file(each.value.values-file)}" ]
+  values = [ "${file(each.value.values_file)}" ]
 }
